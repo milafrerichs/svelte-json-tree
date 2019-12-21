@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset='utf8'>
+	<meta name='viewport' content='width=device-width'>
+
+	<title>Svelte JSON Tree</title>
+	<script src="/index.js" ></script>
+</head>
+
+<body>
+	<div id="main"></div>
+	<script>
+			new JsonTree({
+				target: document.querySelector('#main'),
+				props: {
+					value: {
+						array: [1, 2, 3],
+						bool: true,
+						object: {
+							foo: 'bar'
+						}
+					}
+				}
+			});
+	</script>
+</body>
+</html>
